@@ -7,6 +7,7 @@ linha de teste adicionada
 """
 
 vec = [1, 2, 3, 4, 5]
+a = 123
 
 def rotateLeft(d, arr):
     aux = arr    
@@ -14,13 +15,15 @@ def rotateLeft(d, arr):
     ans = [0]*size
     for execution in range(d):           
         for x in range(size):
-            i = (x+1)%size
+            
+            i = (x+1)%size            
             ans[x] = aux[i]
+            print("Substituindo aux["+str(i)+"] = "+str(aux[i])+" em ans["+str(x)+"]")
         aux = ans            
     return ans
     
     
-print (rotateLeft(4,vec))
+print (rotateLeft(3,vec))
 #for x in range(len(vec)):
 #    print(str((x-1)%5)+": "+str(vec[x]))
 
