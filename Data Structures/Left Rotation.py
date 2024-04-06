@@ -3,6 +3,7 @@
 Created on Sat Apr  6 11:47:28 2024
 
 @author: wescl
+linha de teste adicionada
 """
 
 vec = [1, 2, 3, 4, 5]
@@ -14,9 +15,7 @@ def rotateLeft(d, arr):
     for execution in range(d):           
         for x in range(size):
             i = (x+1)%size
-            ans[x] = aux[i] 
-            
-            
+            ans[x] = aux[i]
         aux = ans            
     return ans
     
