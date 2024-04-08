@@ -81,5 +81,5 @@ root.right.right.left = Node(3)
 root.right.right.right = Node(6)
 root.right.right.left.right = Node(4)
 
-inOrder(root)
+print(root.right)
 

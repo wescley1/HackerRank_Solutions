@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Apr  7 01:01:42 2024
-
-@author: wescley
-"""
-
 class Node:
     def __init__(self, info): 
         self.info = info  
@@ -41,3 +33,43 @@ class BinarySearchTree:
                         break
                 else:
                     break
+
+"""
+Node is defined as
+self.left (the left child of the node)
+self.right (the right child of the node)
+self.info (the value of the node)
+"""
+def postOrder(node):
+    #Write your code here
+    if node == None:
+        return
+ 
+    # First recur on left subtree
+    postOrder(node.left)
+ 
+    # Then recur on right subtree
+    postOrder(node.right)
+ 
+    # Now deal with the node
+    print(node.info, end=' ')
+
+
+
+tree = BinarySearchTree()
+t = int(input())
+
+arr = list(map(int, input().split()))
+
+for i in range(t):
+    tree.create(arr[i])
+
+root = Node(1)
+root.right = Node(2)
+root.right.right = Node(5)
+root.right.right.left = Node(3)
+root.right.right.right = Node(6)
+root.right.right.left.right = Node(4)
+
+postOrder(tree.root)
+
